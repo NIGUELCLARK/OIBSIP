@@ -1,0 +1,153 @@
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+      color: #333;
+      transition: background-color 0.3s;
+    }
+
+    #app {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    h1 {
+      color: #3498db;
+    }
+
+    button {
+      cursor: pointer;
+      padding: 10px;
+      margin: 5px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    #taskList {
+      list-style: none;
+      padding: 0;
+    }
+
+    .task-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px 0;
+    }
+
+    .task {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.3s;
+      background-color: #fff;
+    }
+
+    .task.completed {
+      background-color: #ecf0f1;
+      color: #888;
+      text-decoration: line-through;
+    }
+
+    .task.completed button {
+      text-decoration: line-through;
+    }
+
+    .task:hover {
+      background-color: #f9f9f9;
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 30px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      z-index: 2;
+      border-radius: 10px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.694);
+      z-index: 1;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 0px;
+      right: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-size: 18px;
+      color: #777;
+      text-decoration: none;
+    }
+
+    .close-btn:hover {
+        filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      transition: border-color 0.3s;
+      font-family: 'Arial', sans-serif;
+      font-size: 14px;
+    }
+
+    input:hover,
+    textarea:hover,
+    input:focus,
+    textarea:focus {
+      border-color: #3498db;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .fade-in {
+      animation: fadeIn 0.5s;
+    }
+  
